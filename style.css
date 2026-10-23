@@ -1,0 +1,51 @@
+/* Style follows the Becrux business card: Avenir, black text, logo blue #004990 and gold #FFC72C,
+   thin blue crossing lines. Avenir is not embedded; devices that have it use it, others fall back. */
+:root {
+  --ink: #000000; --muted: #4d5560; --line: #dde3e9; --bg: #ffffff; --soft: #f4f6f9;
+  --blue: #004990; --gold: #ffc72c; --link: #004990; --rule: #004990;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --ink: #eef2f6; --muted: #a2aeba; --line: #283544; --bg: #0f1720; --soft: #16212d; --link: #7fb4ea; --rule: #4f86c6; }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 17px/1.6 "Avenir Next", Avenir, "Avenir LT Std", "Segoe UI", system-ui, -apple-system, Roboto, Ubuntu, sans-serif;
+}
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+a { color: var(--link); }
+
+header { border-bottom: 1px solid var(--line); }
+.bar { display: flex; flex-wrap: wrap; gap: 10px 20px; justify-content: space-between; align-items: center; padding-top: 14px; padding-bottom: 14px; }
+.brand { display: flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; }
+.brand span { display: flex; flex-direction: column; line-height: 1.15; }
+.brand b { font-weight: 800; text-transform: uppercase; letter-spacing: .03em; font-size: 19px; }
+.brand small { font-style: italic; text-transform: uppercase; letter-spacing: .08em; font-size: 12px; color: var(--muted); }
+nav a { color: var(--muted); text-decoration: none; margin-left: 18px; font-size: 15px; }
+nav a:first-child { margin-left: 0; }
+nav a:hover { color: var(--link); }
+
+/* The card's motif: a horizontal and a vertical blue line crossing near a corner */
+.hero { position: relative; margin: 56px 0 40px; padding: 40px 28px 40px 28px; border-top: 0; }
+.hero::before, .hero::after { content: ""; position: absolute; background: var(--rule); }
+.hero::before { height: 1px; left: 0; right: -16px; top: 12px; }
+.hero::after { width: 1px; top: -16px; bottom: 0; left: 12px; }
+.hero h1 { font-weight: 800; text-transform: uppercase; letter-spacing: .01em;
+           font-size: clamp(26px, 5vw, 40px); line-height: 1.15; margin: 0 0 18px; }
+.hero p { font-size: 19px; color: var(--muted); max-width: 660px; margin: 0; }
+
+section { padding: 40px 0; border-top: 1px solid var(--line); }
+h2 { font-size: 21px; font-weight: 800; text-transform: uppercase; letter-spacing: .03em; margin: 0 0 14px; }
+p { max-width: 700px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 20px; }
+.card { background: var(--soft); border: 1px solid var(--line); border-top: 2px solid var(--blue); border-radius: 4px; padding: 18px; }
+.card h3 { margin: 0 0 6px; font-size: 17px; font-weight: 700; }
+.card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+.ticks { padding-left: 1.2em; margin: 0; max-width: 700px; }
+.ticks li { margin-bottom: 10px; }
+.ticks li::marker { color: var(--gold); }
+
+footer { border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--muted); font-size: 14px; }
