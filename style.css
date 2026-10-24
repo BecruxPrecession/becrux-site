@@ -52,4 +52,6 @@ p { max-width: 700px; }
 .ticks li { margin-bottom: 10px; }
 .ticks li::marker { color: var(--gold); }
 
+.sign-off { display: block; width: 120px; height: 120px; margin-top: 28px; }
+
 footer { border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--muted); font-size: 14px; }
