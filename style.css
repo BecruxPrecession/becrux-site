@@ -52,6 +52,21 @@ p { max-width: 700px; }
 .ticks li { margin-bottom: 10px; }
 .ticks li::marker { color: var(--gold); }
 
-.sign-off { display: block; width: 240px; max-width: 60%; height: auto; margin: 36px auto 8px; }
+.brand .mark { display: flex; flex-direction: row; align-items: flex-start; }
+/* Trade mark symbols beside the logos: (R) by the registered bp logo, TM by the br logo (lodged, not registered).
+   Each logo's drawing stops short of its 1000-unit frame (bp: 237 empty at the right; br: 197 at the right, 61 at the
+   top), so each symbol is placed at the drawing's top right, not the frame's. */
+.tm { font-size: 11px; line-height: 1; color: var(--muted); }
+.brand .tm { margin-left: -10px; }                       /* 237/1000 of 44 px */
+/* Sign-off: the bp logo over the br logo, each with its name; logos the same size so the rings line up */
+.sign-off { display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 36px auto 8px; }
+.pair { display: grid; grid-template-columns: 160px 1fr; align-items: center; column-gap: 18px; width: 460px; max-width: 100%; }
+.pair .mark { position: relative; display: block; }
+.pair img { display: block; width: 160px; height: auto; }
+.pair .tm { position: absolute; font-size: 17px; }
+.pair .tm.bp { left: 123px; top: 0; }                     /* drawing ends at 763/1000 across, 10/1000 down */
+.pair .tm.br { left: 124px; top: 6px; font-size: 24px; }  /* drawing ends at 803/1000 across, 61/1000 down; less the shift below; the TM glyph draws small */
+.pair .mark.br { margin-left: -6px; }                     /* br ring centre is 40/1000 right of the bp ring centre: line the rings up */
+.pair b { font-weight: 800; text-transform: uppercase; letter-spacing: .03em; font-size: 22px; }
 
 footer { border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--muted); font-size: 14px; }
