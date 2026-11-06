@@ -23,6 +23,17 @@
 </header>
 
 <main id="top" class="wrap">
+  <figure class="logo-anim">
+    <video id="logo-names" src="logo-names.mp4" poster="logo-names.png" width="1620" height="842" autoplay muted loop playsinline
+           title="Click to pause or play" aria-label="The Becrux Precession logo and name, changing to the Becrux Robotics logo and name, and back"></video>
+    <figcaption>Becrux is the name of a star in the Southern Cross.</figcaption>
+  </figure>
+  <script>
+    // Plays for everyone; a click or tap pauses it and plays it again.
+    var v = document.getElementById('logo-names');
+    v.addEventListener('click', function () { if (v.paused) v.play(); else v.pause(); });
+  </script>
+
   <section class="hero">
     <h1>A robot that places solar panels on racking.</h1>
     <p>Becrux Precession is developing Beccy: a robot that picks solar panels from a pallet and places them
@@ -69,16 +80,6 @@
     <h2>Contact</h2>
     <p>Installers, developers and investors interested in trialling or supporting Beccy:
        <a href="mailto:admin@becrux.au">admin@becrux.au</a></p>
-    <figure class="sign-off">
-      <video id="logo-names" src="logo-names.mp4" poster="logo-names.png" width="1620" height="842" autoplay muted loop playsinline
-             title="Click to pause or play" aria-label="The Becrux Precession logo and name, changing to the Becrux Robotics logo and name, and back"></video>
-      <figcaption>Becrux is the name of a star in the Southern Cross.</figcaption>
-    </figure>
-    <script>
-      // Plays for everyone; a click or tap pauses it and plays it again.
-      var v = document.getElementById('logo-names');
-      v.addEventListener('click', function () { if (v.paused) v.play(); else v.pause(); });
-    </script>
   </section>
 </main>
 

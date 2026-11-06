@@ -58,11 +58,11 @@ p { max-width: 700px; }
    top), so each symbol is placed at the drawing's top right, not the frame's. */
 .tm { font-size: 11px; line-height: 1; color: var(--muted); }
 .brand .tm { margin-left: -10px; }                       /* 237/1000 of 44 px */
-/* Sign-off: the animation of the bp logo and name changing to the br logo and name (becrux-logo,
+/* Top of the page: the animation of the bp logo and name changing to the br logo and name (becrux-logo,
    bp_br_names_animation_v07; white, as the page), with the (R) / TM in the video. Plays muted and looping for everyone
    (autoplay); a click or tap pauses and resumes it. Still of the bp logo and name until it starts. Caption under it. */
-.sign-off { margin: 36px auto 8px; max-width: 560px; text-align: center; }
-.sign-off video { display: block; width: 100%; height: auto; background: #ffffff; cursor: pointer; }
-.sign-off figcaption { margin-top: 8px; font-size: 14px; color: var(--muted); }
+.logo-anim { margin: 32px auto 0; max-width: 560px; text-align: center; }
+.logo-anim video { display: block; width: 100%; height: auto; background: #ffffff; cursor: pointer; }
+.logo-anim figcaption { margin-top: 8px; font-size: 14px; color: var(--muted); }
 
 footer { border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--muted); font-size: 14px; }
