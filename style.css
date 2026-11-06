@@ -58,15 +58,11 @@ p { max-width: 700px; }
    top), so each symbol is placed at the drawing's top right, not the frame's. */
 .tm { font-size: 11px; line-height: 1; color: var(--muted); }
 .brand .tm { margin-left: -10px; }                       /* 237/1000 of 44 px */
-/* Sign-off: the bp logo over the br logo, each with its name; logos the same size so the rings line up */
-.sign-off { display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 36px auto 8px; }
-.pair { display: grid; grid-template-columns: 160px 1fr; align-items: center; column-gap: 18px; width: 460px; max-width: 100%; }
-.pair .mark { position: relative; display: block; }
-.pair img { display: block; width: 160px; height: auto; }
-.pair .tm { position: absolute; font-size: 17px; }
-.pair .tm.bp { left: 123px; top: 0; }                     /* drawing ends at 763/1000 across, 10/1000 down */
-.pair .tm.br { left: 124px; top: 6px; font-size: 24px; }  /* drawing ends at 803/1000 across, 61/1000 down; less the shift below; the TM glyph draws small */
-.pair .mark.br { margin-left: -6px; }                     /* br ring centre is 40/1000 right of the bp ring centre: line the rings up */
-.pair b { font-weight: 800; text-transform: uppercase; letter-spacing: .03em; font-size: 22px; }
+/* Sign-off: the animation of the bp logo and name changing to the br logo and name (becrux-logo,
+   bp_br_names_animation_v07; white, as the page), with the (R) / TM in the video. Plays muted and looping unless the
+   visitor asks for reduced motion; then the still of the bp logo and name shows. Caption under it. */
+.sign-off { margin: 36px auto 8px; max-width: 560px; text-align: center; }
+.sign-off video { display: block; width: 100%; height: auto; background: #ffffff; }
+.sign-off figcaption { margin-top: 8px; font-size: 14px; color: var(--muted); }
 
 footer { border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--muted); font-size: 14px; }

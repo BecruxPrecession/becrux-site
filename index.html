@@ -69,10 +69,15 @@
     <h2>Contact</h2>
     <p>Installers, developers and investors interested in trialling or supporting Beccy:
        <a href="mailto:admin@becrux.au">admin@becrux.au</a></p>
-    <div class="sign-off">
-      <div class="pair"><span class="mark"><img src="logo-mark.svg" alt="" width="160" height="160"><sup class="tm bp" title="Registered trade mark">®</sup></span><b>Becrux Precession</b></div>
-      <div class="pair"><span class="mark br"><img src="br-logo-mark.svg" alt="" width="160" height="160"><sup class="tm br" title="Trade mark">™</sup></span><b>Becrux Robotics</b></div>
-    </div>
+    <figure class="sign-off">
+      <video id="logo-names" src="logo-names.mp4" poster="logo-names.png" width="1620" height="842" muted loop playsinline
+             preload="metadata" aria-label="The Becrux Precession logo and name, changing to the Becrux Robotics logo and name, and back"></video>
+      <figcaption>Becrux is the name of a star in the Southern Cross.</figcaption>
+    </figure>
+    <script>
+      // Play only when the visitor has not asked for reduced motion; otherwise the still (poster) shows.
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.getElementById('logo-names').play().catch(function () {});
+    </script>
   </section>
 </main>
 
