@@ -65,4 +65,9 @@ p { max-width: 700px; }
 .logo-anim video { display: block; width: 100%; height: auto; background: #ffffff; cursor: pointer; }
 .logo-anim figcaption { margin-top: 8px; font-size: 14px; color: var(--muted); }
 
+/* Programme badges near the bottom of the page (Onshape Startup Program, 2026-11-18): small, centred, caption under. */
+.badges { text-align: center; }
+.badges img { display: inline-block; width: 220px; max-width: 100%; height: auto; }
+.badges p { margin: 8px auto 0; font-size: 14px; color: var(--muted); }
+
 footer { border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--muted); font-size: 14px; }
